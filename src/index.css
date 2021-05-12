@@ -1,13 +1,59 @@
+html {
+  font-size: 14px;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  padding: 0;
+  font-size: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.episode-layout {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 100vh;
+}
+
+.episode-box {
+  padding: .5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid black;
+  padding: .5rem;
+  position: sticky;
+  top: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #456BD9;
+  margin: 5px;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: serif, tahoma;
+}
+
+button {
+  background-color: #456BD9;
+  padding: 5px;
+  border: 2px solid transparent;
+  color: #fff;
+
+}
+
+.Badge {
+  background: #ce2c6c;
+  border: 2px solid #fff;
+  border-radius: 99em;
+  padding: 5px;
+  color: #fff;
 }

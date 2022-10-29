@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext, Fragment } from 'react'
+import { Store } from './Store'
+import { Link } from '@reach/router'
 
-function App() {
+ const App = ({
+  children
+}: {
+  children: JSX.Element
+   }): JSX.Element => {
+   const { state } = useContext(Store)
+   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Fragment>
+      <header className='header'>
+        <div>
+          <h1>Money Heist</h1>
+          <p>Pick your favourite episode😘</p>
+        </div>
+        <div className="links">
+          <Link to='/'>Home</Link>
+          <Link to='/faves'>
+            favourite
+            <span className="Badge">
+              {state.favourites.length}
+            </span>
+          </Link>
+        </div>
       </header>
-    </div>
-  );
-}
+      {children}
+    </Fragment>
+  )
+ }
 
-export default App;
+export default App

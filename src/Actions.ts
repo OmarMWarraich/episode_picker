@@ -4,7 +4,8 @@ import { IAction, IEpisode, IState, Dispatch } from './types/interfaces'
 
 export const fetchDataAction = async (dispatch: Dispatch) => {
   const URL =
-    'https://api.tvmaze.com/singlesearch/shows?q=la-casa-de-papel&embed=episodes'
+    'https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes'
+    // 'https://api.tvmaze.com/singlesearch/shows?q=la-casa-de-papel&embed=episodes'
   
   const data = await fetch(URL)
   const dataJSON = await data.json()

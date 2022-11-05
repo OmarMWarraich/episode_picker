@@ -5,6 +5,7 @@ import App from '../App'
 import { Store } from '../Store'
 import { IEpisodeProps } from '../types/interfaces'
 import { fetchDataAction, toggleFavAction } from '../Actions'
+import './HomePage.css'
 
 const EpisodeList = lazy<any>(() => import('./EpisodesList'))
 
